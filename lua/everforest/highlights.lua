@@ -75,7 +75,6 @@ highlights.generate_syntax = function(palette, options)
     CursorColumn = syntax_entry(palette.none, palette.bg1),
     LineNr = syntax_entry(palette.bg5, palette.none),
     CursorLineNr = syntax_entry(palette.grey1, palette.none),
-
     DiffAdd = syntax_entry(palette.none, palette.bg_green),
     DiffChange = syntax_entry(palette.none, palette.bg_blue),
     DiffDelete = syntax_entry(palette.none, palette.bg_red),
@@ -97,12 +96,10 @@ highlights.generate_syntax = function(palette, options)
     NormalFloat = syntax_entry(palette.fg, palette.bg2),
     FloatBorder = syntax_entry(palette.grey1, palette.bg2),
     Question = syntax_entry(palette.yellow, palette.none),
-
     SpellBad = syntax_entry(palette.none, palette.none, { styles.undercurl }, palette.red),
     SpellCap = syntax_entry(palette.none, palette.none, { styles.undercurl }, palette.blue),
     SpellLocal = syntax_entry(palette.none, palette.none, { styles.undercurl }, palette.aqua),
     SpellRare = syntax_entry(palette.none, palette.none, { styles.undercurl }, palette.purple),
-
     StatusLine = syntax_entry(palette.grey1, options.transparent_background_level == 2 and palette.none or palette.bg2),
     StatusLineTerm = syntax_entry(
       palette.grey1,
@@ -124,7 +121,6 @@ highlights.generate_syntax = function(palette, options)
     TabLineSel = syntax_entry(palette.bg0, palette.statusline1),
     VertSplit = syntax_entry(palette.bg4, palette.none),
     WinSeparator = { link = "VertSplit" },
-
     Visual = syntax_entry(palette.none, palette.bg_visual),
     VisualNOS = syntax_entry(palette.none, palette.bg_visual),
     QuickFixLine = syntax_entry(palette.purple, palette.none, { styles.bold }),
@@ -154,7 +150,6 @@ highlights.generate_syntax = function(palette, options)
     DiagnosticSignWarn = { link = "YellowSign" },
     DiagnosticSignInfo = { link = "BlueSign" },
     DiagnosticSignHint = { link = "GreenSign" },
-
     -- LSP colours
     LspDiagnosticsFloatingError = { link = "DiagnosticFloatingError" },
     LspDiagnosticsFloatingWarning = { link = "DiagnosticFloatingWarn" },
@@ -186,11 +181,9 @@ highlights.generate_syntax = function(palette, options)
     healthError = { link = "Red" },
     healthSuccess = { link = "Green" },
     healthWarning = { link = "Yellow" },
-
     Boolean = syntax_entry(palette.purple, palette.none),
     Number = syntax_entry(palette.purple, palette.none),
     Float = syntax_entry(palette.purple, palette.none),
-
     PreProc = syntax_entry(palette.purple, palette.none, optional_italics),
     PreCondit = syntax_entry(palette.purple, palette.none, optional_italics),
     Include = syntax_entry(palette.purple, palette.none, optional_italics),
@@ -201,7 +194,6 @@ highlights.generate_syntax = function(palette, options)
     Typedef = syntax_entry(palette.red, palette.none, optional_italics),
     Exception = syntax_entry(palette.red, palette.none, optional_italics),
     Statement = syntax_entry(palette.red, palette.none, optional_italics),
-
     Error = syntax_entry(palette.red, palette.none),
     StorageClass = syntax_entry(palette.orange, palette.none),
     Tag = syntax_entry(palette.orange, palette.none),
@@ -218,15 +210,12 @@ highlights.generate_syntax = function(palette, options)
     Constant = syntax_entry(palette.aqua, palette.none),
     Macro = syntax_entry(palette.aqua, palette.none),
     Identifier = syntax_entry(palette.blue, palette.none),
-
     Comment = syntax_entry(palette.grey1, palette.none, comment_italics),
     SpecialComment = syntax_entry(palette.grey1, palette.none, comment_italics),
     Todo = syntax_entry(palette.purple, palette.none, comment_italics),
-
     Delimiter = syntax_entry(palette.fg, palette.none),
     Ignore = syntax_entry(palette.grey1, palette.none),
     Underlined = syntax_entry(palette.none, palette.none, { styles.underline }),
-
     -- Predefined highlight groups
     Fg = syntax_entry(palette.fg, palette.none),
     Grey = syntax_entry(palette.grey1, palette.none),
@@ -237,7 +226,6 @@ highlights.generate_syntax = function(palette, options)
     Aqua = syntax_entry(palette.aqua, palette.none),
     Blue = syntax_entry(palette.blue, palette.none),
     Purple = syntax_entry(palette.purple, palette.none),
-
     RedItalic = syntax_entry(palette.red, palette.none, optional_italics),
     OrangeItalic = syntax_entry(palette.orange, palette.none, optional_italics),
     YellowItalic = syntax_entry(palette.yellow, palette.none, optional_italics),
@@ -245,34 +233,29 @@ highlights.generate_syntax = function(palette, options)
     AquaItalic = syntax_entry(palette.aqua, palette.none, optional_italics),
     BlueItalic = syntax_entry(palette.blue, palette.none, optional_italics),
     PurpleItalic = syntax_entry(palette.purple, palette.none, optional_italics),
-
     -- Related to `transparent_background` and `sign_column_background`
-    RedSign = syntax_entry(palette.red, colour_respecting_options(palette.bg1)),
-    OrangeSign = syntax_entry(palette.orange, colour_respecting_options(palette.bg1)),
-    YellowSign = syntax_entry(palette.yellow, colour_respecting_options(palette.bg1)),
-    GreenSign = syntax_entry(palette.green, colour_respecting_options(palette.bg1)),
-    AquaSign = syntax_entry(palette.aqua, colour_respecting_options(palette.bg1)),
-    BlueSign = syntax_entry(palette.blue, colour_respecting_options(palette.bg1)),
-    PurpleSign = syntax_entry(palette.purple, colour_respecting_options(palette.bg1)),
-
+    RedSign = syntax_entry(palette.red, palette.none),
+    OrangeSign = syntax_entry(palette.orange, palette.none),
+    YellowSign = syntax_entry(palette.yellow, palette.none),
+    GreenSign = syntax_entry(palette.green, palette.none),
+    AquaSign = syntax_entry(palette.aqua, palette.none),
+    BlueSign = syntax_entry(palette.blue, palette.none),
+    PurpleSign = syntax_entry(palette.purple, palette.none),
     -- Configuration based on `diagnostic_text_highlight` option
     ErrorText = syntax_entry(palette.none, palette.none, { styles.undercurl }, palette.red),
     WarningText = syntax_entry(palette.none, palette.none, { styles.undercurl }, palette.yellow),
     InfoText = syntax_entry(palette.none, palette.none, { styles.undercurl }, palette.blue),
     HintText = syntax_entry(palette.none, palette.none, { styles.undercurl }, palette.green),
-
     -- Configuration based on `diagnostic_virtual_text` option
     VirtualTextWarning = { link = "Yellow" },
     VirtualTextError = { link = "Red" },
     VirtualTextInfo = { link = "Blue" },
     VirtualTextHint = { link = "Green" },
-
     ErrorFloat = syntax_entry(palette.red, palette.bg2),
     WarningFloat = syntax_entry(palette.yellow, palette.bg2),
     InfoFloat = syntax_entry(palette.blue, palette.bg2),
     HintFloat = syntax_entry(palette.green, palette.bg2),
     CurrentWord = syntax_entry(palette.none, palette.none, { styles.bold }),
-
     -- Git commit colours
     gitcommitSummary = { link = "Green" },
     gitcommitUntracked = { link = "Grey" },
@@ -282,7 +265,6 @@ highlights.generate_syntax = function(palette, options)
     gitcommitOnBranch = { link = "Grey" },
     gitcommitArrow = { link = "Grey" },
     gitcommitFile = { link = "Green" },
-
     -- Help colours
     helpNote = syntax_entry(palette.purple, palette.none, { styles.bold }),
     helpHeadline = syntax_entry(palette.red, palette.none, { styles.bold }),
@@ -294,7 +276,6 @@ highlights.generate_syntax = function(palette, options)
     helpExample = { link = "Green" },
     helpSpecial = { link = "Blue" },
     helpSectionDelim = { link = "Grey" },
-
     -- Treesitter
     TSStrong = syntax_entry(palette.none, palette.none, { styles.bold }),
     TSEmphasis = syntax_entry(palette.none, palette.none, { styles.italic }),
@@ -371,7 +352,6 @@ highlights.generate_syntax = function(palette, options)
     TSURI = { link = "markdownUrl" },
     TSVariable = { link = "Fg" },
     TSVariableBuiltin = { link = "PurpleItalic" },
-
     javascriptTSInclude = { link = "Purple" },
     typescriptTSInclude = { link = "Purple" },
     tsxTSConstructor = { link = "TSType" },
@@ -399,7 +379,6 @@ highlights.generate_syntax = function(palette, options)
     tomlString = { link = "Fg" },
     tomlTSProperty = { link = "tomlKey" },
     tomlTSString = { link = "tomlString" },
-
     -- New Treesitter highlights
     ["@annotation"] = { link = "TSAnnotation" },
     ["@attribute"] = { link = "TSAttribute" },
@@ -501,7 +480,6 @@ highlights.generate_syntax = function(palette, options)
     ["@uri"] = { link = "TSURI" },
     ["@variable"] = { link = "TSVariable" },
     ["@variable.builtin"] = { link = "TSVariableBuiltin" },
-
     -- LSP Semantic token highlights
     ["@lsp.type.class"] = { link = "TSType" },
     ["@lsp.type.comment"] = { link = "TSComment" },
@@ -537,7 +515,6 @@ highlights.generate_syntax = function(palette, options)
     ["@lsp.typemod.variable.defaultLibrary.typescript"] = { link = "TSConstBuiltin" },
     ["@lsp.typemod.variable.defaultLibrary.typescriptreact"] = { link = "TSConstBuiltin" },
     ["@lsp.typemod.variable.injected"] = { link = "@variable" },
-
     -- p00f/ts-rainbow
     rainbowcol1 = syntax_entry(palette.red, palette.none),
     rainbowcol2 = syntax_entry(palette.orange, palette.none),
@@ -546,7 +523,6 @@ highlights.generate_syntax = function(palette, options)
     rainbowcol5 = syntax_entry(palette.aqua, palette.none),
     rainbowcol6 = syntax_entry(palette.blue, palette.none),
     rainbowcol7 = syntax_entry(palette.purple, palette.none),
-
     -- HiPhish/nvim-ts-rainbow2
     TSRainbowRed = { link = "rainbowcol1" },
     TSRainbowOrange = { link = "rainbowcol2" },
@@ -555,7 +531,6 @@ highlights.generate_syntax = function(palette, options)
     TSRainbowCyan = { link = "rainbowcol5" },
     TSRainbowBlue = { link = "rainbowcol6" },
     TSRainbowViolet = { link = "rainbowcol7" },
-
     -- Diff
     diffAdded = { link = "Green" },
     diffRemoved = { link = "Red" },
@@ -565,10 +540,8 @@ highlights.generate_syntax = function(palette, options)
     diffFile = { link = "Aqua" },
     diffLine = { link = "Grey" },
     diffIndexLine = { link = "Purple" },
-
     -- machakann/vim-highlightedyank
     HighlightedyankRegion = { link = "Visual" },
-
     -- Coc.nvim
     CocHoverRange = syntax_entry(palette.none, palette.none, { styles.bold, styles.underline }),
     CocSearch = syntax_entry(palette.green, palette.none, { styles.bold }),
@@ -658,7 +631,6 @@ highlights.generate_syntax = function(palette, options)
     CocSymbolOperator = { link = "Orange" },
     CocSymbolTypeParameter = { link = "Yellow" },
     CocSymbolDefault = { link = "Aqua" },
-
     -- https://github.com/weirongxu/coc-explorer
     CocExplorerBufferRoot = { link = "Orange" },
     CocExplorerBufferExpandIcon = { link = "Aqua" },
@@ -698,7 +670,6 @@ highlights.generate_syntax = function(palette, options)
     CocExplorerDiagnosticError = { link = "Red" },
     CocExplorerDiagnosticWarning = { link = "Yellow" },
     CocExplorerFileHidden = { link = "Grey" },
-
     -- prabirshrestha/vim-lsp
     LspErrorVirtual = { link = "VirtualTextError" },
     LspWarningVirtual = { link = "VirtualTextWarning" },
@@ -731,7 +702,6 @@ highlights.generate_syntax = function(palette, options)
     LspSemanticNumber = { link = "TSNumber" },
     LspSemanticRegexp = { link = "TSStringRegex" },
     LspSemanticOperator = { link = "TSOperator" },
-
     -- ycm-core/YouCompleteMe
     YcmErrorSign = { link = "RedSign" },
     YcmWarningSign = { link = "YellowSign" },
@@ -740,7 +710,6 @@ highlights.generate_syntax = function(palette, options)
     YcmErrorSection = { link = "ErrorText" },
     YcmWarningSection = { link = "WarningText" },
     YcmInlayHint = { link = "LineNr" },
-
     -- dense-analysis/ale
     ALEError = { link = "ErrorText" },
     ALEWarning = { link = "WarningText" },
@@ -756,7 +725,6 @@ highlights.generate_syntax = function(palette, options)
     ALEVirtualTextInfo = { link = "VirtualTextInfo" },
     ALEVirtualTextStyleError = { link = "VirtualTextHint" },
     ALEVirtualTextStyleWarning = { link = "VirtualTextHint" },
-
     -- neomake/neomake
     NeomakeError = { link = "ErrorText" },
     NeomakeWarning = { link = "WarningText" },
@@ -770,7 +738,6 @@ highlights.generate_syntax = function(palette, options)
     NeomakeVirtualtextWarning = { link = "VirtualTextWarning" },
     NeomakeVirtualtextInfo = { link = "VirtualTextInfo" },
     NeomakeVirtualtextMessag = { link = "VirtualTextHint" },
-
     -- vim-syntastic/syntastic
     SyntasticError = { link = "ErrorText" },
     SyntasticWarning = { link = "WarningText" },
@@ -778,7 +745,6 @@ highlights.generate_syntax = function(palette, options)
     SyntasticWarningSign = { link = "YellowSign" },
     SyntasticErrorLine = { link = "ErrorLine" },
     SyntasticWarningLine = { link = "WarningLine" },
-
     -- liuchengxu/vim-clap
     ClapSelected = syntax_entry(palette.red, palette.none, { styles.bold }),
     ClapCurrentSelection = syntax_entry(palette.none, palette.bg1, { styles.bold }),
@@ -813,7 +779,6 @@ highlights.generate_syntax = function(palette, options)
     ClapProviderAbout = { link = "ClapBlines" },
     ClapFile = { link = "Fg" },
     ClapSearchText = { link = "ClapFuzzyMatches" },
-
     -- Shougo/denite.nvim
     deniteMatchedChar = syntax_entry(palette.green, palette.none, { styles.bold }),
     deniteMatchedRange = syntax_entry(palette.green, palette.none, { styles.bold, styles.underline }),
@@ -821,7 +786,6 @@ highlights.generate_syntax = function(palette, options)
     deniteStatusLineNumber = syntax_entry(palette.purple, palette.bg3),
     deniteStatusLinePath = syntax_entry(palette.fg, palette.bg3),
     deniteSelectedLin = { link = "Green" },
-
     -- kien/ctrlp.vim
     CtrlPMatch = syntax_entry(palette.green, palette.none, { styles.bold }),
     CtrlPPrtBase = syntax_entry(palette.bg3, palette.none),
@@ -831,7 +795,6 @@ highlights.generate_syntax = function(palette, options)
     CtrlPStats = syntax_entry(palette.grey1, palette.bg3, { styles.bold }),
     CtrlPNoEntries = { link = "Red" },
     CtrlPPrtCursor = { link = "Blue" },
-
     -- airblade/vim-gitgutter
     GitGutterAdd = { link = "GreenSign" },
     GitGutterChange = { link = "BlueSign" },
@@ -845,7 +808,6 @@ highlights.generate_syntax = function(palette, options)
     GitGutterChangeLineNr = { link = "Blue" },
     GitGutterDeleteLineNr = { link = "Red" },
     GitGutterChangeDeleteLineNr = { link = "Purple" },
-
     -- mhinz/vim-signify
     SignifySignAdd = { link = "GreenSign" },
     SignifySignChange = { link = "BlueSign" },
@@ -855,38 +817,30 @@ highlights.generate_syntax = function(palette, options)
     SignifyLineChange = { link = "DiffChange" },
     SignifyLineChangeDelete = { link = "DiffChange" },
     SignifyLineDelete = { link = "DiffDelete" },
-
     -- andymass/vim-matchup
     MatchParenCur = syntax_entry(palette.none, palette.none, { styles.bold }),
     MatchWord = syntax_entry(palette.none, palette.none, { styles.underline }),
     MatchWordCur = syntax_entry(palette.none, palette.none, { styles.underline }),
-
     -- easymotion/vim-easymotion
     EasyMotionTarget = { link = "Search" },
     EasyMotionShade = { link = "Grey" },
-
     -- justinmk/vim-sneak
     SneakLabelMask = syntax_entry(palette.orange, palette.orange),
     Sneak = { link = "Search" },
     SneakLabel = { link = "Search" },
     SneakScope = { link = "DiffText" },
-
     -- rhysd/clever-f.vim
     CleverFDefaultLabel = { link = "Search" },
-
     -- dominikduda/vim_current_word
     CurrentWordTwins = { link = "CurrentWord" },
-
     -- RRethy/vim-illuminate
     illuminatedWord = { link = "CurrentWord" },
     IlluminatedWordText = { link = "CurrentWord" },
     IlluminatedWordRead = { link = "CurrentWord" },
     IlluminatedWordWrite = { link = "CurrentWord" },
-
     -- itchyny/vim-cursorword
     CursorWord0 = { link = "CurrentWord" },
     CursorWord1 = { link = "CurrentWord" },
-
     -- thiagoalessio/rainbow_levels.vim
     RainbowLevel0 = { link = "Red" },
     RainbowLevel1 = { link = "Orange" },
@@ -897,17 +851,14 @@ highlights.generate_syntax = function(palette, options)
     RainbowLevel6 = { link = "Purple" },
     RainbowLevel7 = { link = "Yellow" },
     RainbowLevel8 = { link = "Green" },
-
     -- kshenoy/vim-signature
     SignatureMarkText = { link = "BlueSign" },
     SignatureMarkerText = { link = "PurpleSign" },
-
     -- ap/vim-buftabline
     BufTabLineCurrent = { link = "TabLineSel" },
     BufTabLineActive = { link = "TabLine" },
     BufTabLineHidden = { link = "TabLineFill" },
     BufTabLineFill = { link = "TabLineFill" },
-
     -- folke/which-key.nvim
     WhichKey = { link = "Red" },
     WhichKeyDesc = { link = "Blue" },
@@ -915,14 +866,11 @@ highlights.generate_syntax = function(palette, options)
     WhichKeyGroup = { link = "Yellow" },
     WhichKeySeparator = { link = "Green" },
     WhichKeyValue = syntax_entry(palette.fg, palette.none),
-
     -- unblevable/quick-scope
     QuickScopePrimary = syntax_entry(palette.aqua, palette.none, { styles.underline }),
     QuickScopeSecondary = syntax_entry(palette.blue, palette.none, { styles.underline }),
-
     -- APZelos/blamer.nvim
     Blamer = { link = "Grey" },
-
     -- cohama/agit.vim
     agitTree = { link = "Grey" },
     agitDate = { link = "Green" },
@@ -937,16 +885,13 @@ highlights.generate_syntax = function(palette, options)
     agitDiffRemove = { link = "Red" },
     agitDiffAdd = { link = "Green" },
     agitDiffHeader = { link = "Purple" },
-
     -- voldikss/vim-floaterm
     FloatermBorder = { link = "Grey" },
-
     -- MattesGroeger/vim-bookmarks
     BookmarkSign = { link = "BlueSign" },
     BookmarkAnnotationSign = { link = "GreenSign" },
     BookmarkLine = { link = "DiffChange" },
     BookmarkAnnotationLine = { link = "DiffAdd" },
-
     -- hrsh7th/nvim-cmp
     CmpItemAbbrMatch = syntax_entry(palette.green, palette.none, { styles.bold }),
     CmpItemAbbrMatchFuzzy = syntax_entry(palette.green, palette.none, { styles.bold }),
@@ -979,18 +924,15 @@ highlights.generate_syntax = function(palette, options)
     CmpItemKindUnit = { link = "Purple" },
     CmpItemKindValue = { link = "Purple" },
     CmpItemKindVariable = { link = "Blue" },
-
     -- folke/trouble.nvim
     TroubleText = { link = "Fg" },
     TroubleSource = { link = "Grey" },
     TroubleCode = { link = "Grey" },
-
     -- nvim-telescope/telescope.nvim
     TelescopeMatching = syntax_entry(palette.green, palette.none, { styles.bold }),
     TelescopeBorder = { link = "Grey" },
     TelescopePromptPrefix = { link = "Orange" },
     TelescopeSelection = { link = "DiffAdd" },
-
     -- lewis6991/gitsigns.nvim
     GitSignsAdd = { link = "GreenSign" },
     GitSignsChange = { link = "BlueSign" },
@@ -1002,25 +944,21 @@ highlights.generate_syntax = function(palette, options)
     GitSignsChangeLn = { link = "DiffChange" },
     GitSignsDeleteLn = { link = "DiffDelete" },
     GitSignsCurrentLineBlame = { link = "Grey" },
-
     -- phaazon/hop.nvim
     HopNextKey = syntax_entry(palette.orange, palette.none, { styles.bold }),
     HopNextKey1 = syntax_entry(palette.green, palette.none, { styles.bold }),
     HopNextKey2 = { link = "Green" },
     HopUnmatched = { link = "Grey" },
-
     -- ggandor/leap.nvim
     LeapMatch = syntax_entry(palette.fg, palette.purple, { styles.bold }),
     LeapLabelPrimary = syntax_entry(palette.purple, palette.none, { styles.bold }),
     LeapLabelSecondary = syntax_entry(palette.green, palette.none, { styles.bold }),
     LeapBackdrop = syntax_entry(palette.grey1, palette.none),
-
     -- lukas-reineke/indent-blankline.nvim
     IndentBlanklineContextChar = syntax_entry(palette.grey1, palette.none, { styles.nocombine }),
     IndentBlanklineChar = syntax_entry(palette.bg5, palette.none, { styles.nocombine }),
     IndentBlanklineSpaceChar = { link = "IndentBlanklineChar" },
     IndentBlanklineSpaceCharBlankline = { link = "IndentBlanklineChar" },
-
     -- romgrk/barbar.nvim
     BufferCurrent = syntax_entry(palette.fg, palette.bg0),
     BufferCurrentIndex = syntax_entry(palette.fg, palette.bg0),
@@ -1039,7 +977,6 @@ highlights.generate_syntax = function(palette, options)
     BufferInactiveTarget = syntax_entry(palette.yellow, palette.bg_dim, { styles.bold }),
     BufferTabpages = syntax_entry(palette.grey1, palette.bg_dim, { styles.bold }),
     BufferTabpageFill = syntax_entry(palette.bg_dim, palette.bg_dim),
-
     -- SmiteshP/nvim-navic
     NavicIconsFile = syntax_entry(palette.fg, palette.none),
     NavicIconsModule = syntax_entry(palette.yellow, palette.none),
@@ -1066,11 +1003,10 @@ highlights.generate_syntax = function(palette, options)
     NavicIconsEnumMember = syntax_entry(palette.green, palette.none),
     NavicIconsStruct = syntax_entry(palette.orange, palette.none),
     NavicIconsEvent = syntax_entry(palette.orange, palette.none),
-    NavicIconsOperator = syntax_entry(palette.fg, palette.none),
+    NavicIconsOperator = syntax_entry(palette.grey0, palette.none),
     NavicIconsTypeParameter = syntax_entry(palette.green, palette.none),
-    NavicText = syntax_entry(palette.fg, palette.none),
-    NavicSeparator = syntax_entry(palette.fg, palette.none),
-
+    NavicText = syntax_entry(palette.grey0, palette.none),
+    NavicSeparator = syntax_entry(palette.grey0, palette.none),
     -- rcarriga/nvim-notify
     -- Borders
     NotifyDEBUGBorder = { link = "Grey" },
@@ -1078,21 +1014,18 @@ highlights.generate_syntax = function(palette, options)
     NotifyINFOBorder = { link = "Green" },
     NotifyTRACEBorder = { link = "Purple" },
     NotifyWARNBorder = { link = "Yellow" },
-
     -- Icons
     NotifyDEBUGIcon = { link = "Grey" },
     NotifyERRORIcon = { link = "Red" },
     NotifyINFOIcon = { link = "Green" },
     NotifyTRACEIcon = { link = "Purple" },
     NotifyWARNIcon = { link = "Yellow" },
-
     -- Titles
     NotifyDEBUGTitle = { link = "Grey" },
     NotifyERRORTitle = { link = "Red" },
     NotifyINFOTitle = { link = "Green" },
     NotifyTRACETitle = { link = "Purple" },
     NotifyWARNTitle = { link = "Yellow" },
-
     -- rcarriga/nvim-dap-ui
     DapUIModifiedValue = syntax_entry(palette.blue, palette.none, { styles.bold }),
     DapUIBreakpointsCurrentLine = syntax_entry(palette.blue, palette.none, { styles.bold }),
@@ -1109,7 +1042,6 @@ highlights.generate_syntax = function(palette, options)
     DapUIWatchesError = { link = "Red" },
     DapUIBreakpointsPath = { link = "Blue" },
     DapUIBreakpointsInfo = { link = "Green" },
-
     -- glepnir/lspsaga.nvim
     CodeActionBorder = { link = "Purple" },
     DiagnosticBorder = { link = "Orange" },
@@ -1118,10 +1050,8 @@ highlights.generate_syntax = function(palette, options)
     HoverBorder = { link = "Green" },
     RenameBorder = { link = "Purple" },
     SagaBorder = { link = "Blue" },
-
     -- b0o/incline.nvim
     InclineNormalNC = syntax_entry(palette.grey1, palette.bg2),
-
     -- echasnovski/mini.nvim
     MiniIndentscopePrefix = syntax_entry(palette.none, palette.none, { styles.nocombine }),
     MiniJump2dSpot = syntax_entry(palette.orange, palette.none, { styles.bold, styles.nocombine }),
@@ -1162,7 +1092,6 @@ highlights.generate_syntax = function(palette, options)
     MiniStarterSection = { link = "Title" },
     MiniSurround = { link = "IncSearch" },
     MiniTablineFill = { link = "TabLineFill" },
-
     -- ggandor/lightspeed.nvim
     LightspeedLabel = syntax_entry(palette.red, palette.none, { styles.bold, styles.underline }),
     LightspeedLabelDistant = syntax_entry(palette.blue, palette.none, { styles.bold, styles.underline }),
@@ -1171,7 +1100,6 @@ highlights.generate_syntax = function(palette, options)
     LightspeedPendingOpArea = syntax_entry(palette.bg0, palette.green),
     LightspeedMaskedChar = { link = "Purple" },
     LightspeedGreyWash = { link = "Grey" },
-
     -- https://github.com/junegunn/vim-plug
     plug1 = syntax_entry(palette.orange, palette.none, { styles.bold }),
     plugNumber = syntax_entry(palette.yellow, palette.none, { styles.bold }),
@@ -1189,7 +1117,6 @@ highlights.generate_syntax = function(palette, options)
     plugDeleted = { link = "Grey" },
     plugEdge = { link = "Yellow" },
     plugSha = { link = "Green" },
-
     -- https://github.com/wbthomason/packer.nvim
     packerSuccess = { link = "Aqua" },
     packerFail = { link = "Red" },
@@ -1206,7 +1133,6 @@ highlights.generate_syntax = function(palette, options)
     packerTimeHigh = { link = "Red" },
     packerTimeMedium = { link = "Yellow" },
     packerTimeLow = { link = "Green" },
-
     -- https://github.com/majutsushi/tagbar
     TagbarFoldIcon = { link = "Green" },
     TagbarSignature = { link = "Green" },
@@ -1215,7 +1141,6 @@ highlights.generate_syntax = function(palette, options)
     TagbarNestedKind = { link = "Aqua" },
     TagbarVisibilityPrivate = { link = "Red" },
     TagbarVisibilityPublic = { link = "Blue" },
-
     -- https://github.com/liuchengxu/vista.vim
     VistaBracket = { link = "Grey" },
     VistaChildrenNr = { link = "Orange" },
@@ -1230,10 +1155,8 @@ highlights.generate_syntax = function(palette, options)
     VistaPublic = { link = "Green" },
     VistaProtected = { link = "Yellow" },
     VistaPrivate = { link = "Red" },
-
     -- https://github.com/simrat39/symbols-outline.nvim
     FocusedSymbol = { link = "NormalFloat" },
-
     -- https://github.com/stevearc/aerial.nvim
     AerialLine = { link = "CursorLine" },
     AerialGuide = { link = "LineNr" },
@@ -1263,7 +1186,6 @@ highlights.generate_syntax = function(palette, options)
     AerialEventIcon = { link = "Orange" },
     AerialOperatorIcon = { link = "Orange" },
     AerialTypeParameterIcon = { link = "Yellow" },
-
     -- https://github.com/preservim/nerdtree
     NERDTreeDir = { link = "Green" },
     NERDTreeDirSlash = { link = "Aqua" },
@@ -1279,11 +1201,9 @@ highlights.generate_syntax = function(palette, options)
     NERDTreeFlags = { link = "Orange" },
     NERDTreeLinkFile = { link = "Grey" },
     NERDTreeLinkTarget = { link = "Green" },
-
     -- https://github.com/justinmk/vim-dirvish
     DirvishPathTail = { link = "Aqua" },
     DirvishArg = { link = "Yellow" },
-
     -- https://github.com/kyazdani42/nvim-tree.lua
     NvimTreeSymlink = { link = "Fg" },
     NvimTreeFolderName = { link = "Green" },
@@ -1307,7 +1227,6 @@ highlights.generate_syntax = function(palette, options)
     NvimTreeLspDiagnosticsWarning = { link = "YellowSign" },
     NvimTreeLspDiagnosticsInformation = { link = "BlueSign" },
     NvimTreeLspDiagnosticsHint = { link = "GreenSign" },
-
     -- nvim-neo-tree/neo-tree.nvim
     NeoTreeDirectoryIcon = { link = "Orange" },
     NeoTreeGitAdded = { link = "Green" },
@@ -1323,7 +1242,6 @@ highlights.generate_syntax = function(palette, options)
     NeoTreeNormalNC = { link = "NeoTreeNormal" },
     NeoTreeSignColumn = { link = "NeoTreeNormal" },
     NeoTreeRootName = { link = "Title" },
-
     -- https://github.com/lambdalisue/fern.vim
     FernMarkedLine = { link = "Purple" },
     FernMarkedText = { link = "Purple" },
@@ -1335,7 +1253,6 @@ highlights.generate_syntax = function(palette, options)
     FernBranchText = { link = "Green" },
     FernWindowSelectIndicator = { link = "TabLineSel" },
     FernWindowSelectStatusLine = { link = "TabLine" },
-
     -- https://github.com/pwntester/octo.nvim
     OctoViewer = syntax_entry(palette.bg0, palette.blue),
     OctoGreenFloat = syntax_entry(palette.green, palette.bg2),
@@ -1362,7 +1279,6 @@ highlights.generate_syntax = function(palette, options)
     OctoBubbleDelimiterYellow = { link = "Yellow" },
     OctoBubbleDelimiterBlue = { link = "Blue" },
     OctoBubbleDelimiterGrey = { link = "Grey" },
-
     -- netrw
     netrwDir = { link = "Green" },
     netrwClassify = { link = "Green" },
@@ -1374,7 +1290,6 @@ highlights.generate_syntax = function(palette, options)
     netrwHelpCmd = { link = "Blue" },
     netrwCmdSep = { link = "Grey" },
     netrwVersion = { link = "Orange" },
-
     -- https://github.com/mhinz/vim-startify
     StartifyBracket = { link = "Grey" },
     StartifyFile = { link = "Fg" },
@@ -1385,7 +1300,6 @@ highlights.generate_syntax = function(palette, options)
     StartifyHeader = { link = "Aqua" },
     StartifySpecial = { link = "Grey" },
     StartifyFooter = { link = "Grey" },
-
     -- https://github.com/skywind3000/quickmenu.vim
     QuickmenuOption = { link = "Green" },
     QuickmenuNumber = { link = "Red" },
@@ -1393,7 +1307,6 @@ highlights.generate_syntax = function(palette, options)
     QuickmenuHelp = { link = "Green" },
     QuickmenuSpecial = { link = "Purple" },
     QuickmenuHeader = { link = "Orange" },
-
     -- mbbill/undotree
     UndotreeSavedBig = syntax_entry(palette.purple, palette.none, { styles.bold }),
     UndotreeNode = { link = "Orange" },
@@ -1405,7 +1318,6 @@ highlights.generate_syntax = function(palette, options)
     UndotreeBranch = { link = "Yellow" },
     UndotreeCurrent = { link = "Aqua" },
     UndotreeSavedSmall = { link = "Purple" },
-
     -- TimUntersberger/neogit
     NeogitNotificationInfo = { link = "Blue" },
     NeogitNotificationWarning = { link = "Yellow" },
@@ -1419,13 +1331,11 @@ highlights.generate_syntax = function(palette, options)
     NeogitCommandCodeError = { link = "Red" },
     NeogitCommitViewHeader = { link = "diffIndexLine" },
     NeogitFilePath = { link = "diffFile" },
-
     -- glepnir/dashboard-nvim
     DashboardHeader = { link = "Yellow" },
     DashboardCenter = { link = "Green" },
     DashboardShortcut = { link = "Red" },
     DashboardFooter = { link = "Orange" },
-
     -- nvim-neotest/neotest
     NeotestPassed = syntax_entry(palette.green, palette.none),
     NeotestRunning = syntax_entry(palette.yellow, palette.none),
@@ -1442,7 +1352,6 @@ highlights.generate_syntax = function(palette, options)
     NeotestWinSelect = syntax_entry(palette.blue, palette.none),
     NeotestMarked = syntax_entry(palette.blue, palette.none),
     NeotestTarget = syntax_entry(palette.blue, palette.none),
-
     -- lambdalisue/glyph-palette.vim
     GlyphPalette1 = syntax_entry(palette.red, palette.none),
     GlyphPalette2 = syntax_entry(palette.green, palette.none),
@@ -1451,10 +1360,8 @@ highlights.generate_syntax = function(palette, options)
     GlyphPalette6 = syntax_entry(palette.green, palette.none),
     GlyphPalette7 = syntax_entry(palette.fg, palette.none),
     GlyphPalette9 = syntax_entry(palette.red, palette.none),
-
     -- akinsho/bufferline.nvim
     BufferLineIndicatorSelected = { link = "GreenSign" },
-
     -- petertriho/nvim-scrollbar
     ScrollbarHandle = syntax_entry(palette.none, palette.bg1),
     ScrollbarSearchHandle = syntax_entry(palette.orange, palette.bg1),
@@ -1469,11 +1376,9 @@ highlights.generate_syntax = function(palette, options)
     ScrollbarHint = syntax_entry(palette.blue, palette.none),
     ScrollbarMiscHandle = syntax_entry(palette.purple, palette.bg1),
     ScrollbarMisc = syntax_entry(palette.purple, palette.none),
-
     -- gbprod/yanky.nvim
     YankyPut = { link = "IncSearch" },
     YankyYanked = { link = "IncSearch" },
-
     -- folke/noice.nvim
     NoiceCompletionItemKindDefault = syntax_entry(palette.grey1, palette.none),
     NoiceCompletionItemKindKeyword = syntax_entry(palette.aqua, palette.none),
@@ -1497,11 +1402,9 @@ highlights.generate_syntax = function(palette, options)
     NoiceCompletionItemKindEnumMember = syntax_entry(palette.green, palette.none),
     NoiceCompletionItemKindOperator = syntax_entry(palette.green, palette.none),
     NoiceCompletionItemKindSnippet = syntax_entry(palette.grey1, palette.none),
-
     -- nullchilly/fsread.nvim
     FSPrefix = syntax_entry(palette.fg, colour_respecting_options(palette.bg0), { styles.bold }),
     FSSuffix = syntax_entry(palette.grey1, palette.none),
-
     -- Language specific settings
     -- Markdown
     markdownH1 = syntax_entry(palette.red, palette.none, { styles.bold }),
@@ -1531,7 +1434,6 @@ highlights.generate_syntax = function(palette, options)
     markdownIdDeclaration = { link = "markdownLinkText" },
     markdownBoldDelimiter = { link = "Grey" },
     markdownId = { link = "Yellow" },
-
     -- HTML
     htmlH1 = syntax_entry(palette.red, palette.none, { styles.bold }),
     htmlH2 = syntax_entry(palette.orange, palette.none, { styles.bold }),
@@ -1558,7 +1460,6 @@ highlights.generate_syntax = function(palette, options)
     htmlArg = { link = "Aqua" },
     htmlScriptTag = { link = "Purple" },
     htmlSpecialTagName = { link = "RedItalic" },
-
     -- XML
     xmlTag = { link = "Green" },
     xmlEndTag = { link = "Blue" },
@@ -1571,7 +1472,6 @@ highlights.generate_syntax = function(palette, options)
     xmlDocTypeKeyword = { link = "PurpleItalic" },
     xmlCdataStart = { link = "Grey" },
     xmlCdataCdata = { link = "Purple" },
-
     -- CSS
     cssAttrComma = { link = "Fg" },
     cssBraces = { link = "Fg" },
@@ -1599,7 +1499,6 @@ highlights.generate_syntax = function(palette, options)
     cssValueFrequency = { link = "Green" },
     cssVendor = { link = "Grey" },
     cssNoise = { link = "Grey" },
-
     -- SCSS
     scssMixinName = { link = "Yellow" },
     scssSelectorChar = { link = "Red" },
@@ -1612,7 +1511,6 @@ highlights.generate_syntax = function(palette, options)
     scssForKeyword = { link = "PurpleItalic" },
     scssAttribute = { link = "Orange" },
     scssFunctionName = { link = "Yellow" },
-
     -- SASS
     sassProperty = { link = "Aqua" },
     sassAmpersand = { link = "Orange" },
@@ -1626,14 +1524,12 @@ highlights.generate_syntax = function(palette, options)
     sassControl = { link = "RedItalic" },
     sassFor = { link = "RedItalic" },
     sassFunctionName = { link = "Green" },
-
     -- Less
     lessMixinChar = { link = "Grey" },
     lessClass = { link = "RedItalic" },
     lessVariable = { link = "Blue" },
     lessAmpersandChar = { link = "Orange" },
     lessFunction = { link = "Yellow" },
-
     -- JS/X
     javaScriptNull = { link = "Aqua" },
     javaScriptNumber = { link = "Number" },
@@ -1643,19 +1539,16 @@ highlights.generate_syntax = function(palette, options)
     javaScriptFunction = { link = "Keyword" },
     javaScriptOperator = { link = "Orange" },
     javaScriptMember = { link = "Aqua" },
-
     -- Python
     pythonBuiltin = { link = "Yellow" },
     pythonExceptions = { link = "Purple" },
     pythonDecoratorName = { link = "Blue" },
-
     -- Lua
     luaBraces = { link = "Fg" },
     luaFunc = { link = "Green" },
     luaFunction = { link = "Aqua" },
     luaTable = { link = "Fg" },
     luaIn = { link = "RedItalic" },
-
     -- Java
     javaClassDecl = { link = "RedItalic" },
     javaMethodDecl = { link = "RedItalic" },
@@ -1669,7 +1562,6 @@ highlights.generate_syntax = function(palette, options)
     javaParen3 = { link = "Fg" },
     javaParen4 = { link = "Fg" },
     javaParen5 = { link = "Fg" },
-
     -- Go
     goPackage = { link = "Define" },
     goImport = { link = "Include" },
@@ -1686,7 +1578,6 @@ highlights.generate_syntax = function(palette, options)
     goPredefinedIdentifiers = { link = "Aqua" },
     goBuiltins = { link = "Function" },
     goVarArgs = { link = "Grey" },
-
     -- Rust
     rustStructure = { link = "Orange" },
     rustIdentifier = { link = "Purple" },
@@ -1700,7 +1591,6 @@ highlights.generate_syntax = function(palette, options)
     rustAssert = { link = "Aqua" },
     rustPanic = { link = "Aqua" },
     rustPubScopeCrate = { link = "PurpleItalic" },
-
     -- PHP
     phpVarSelector = { link = "Blue" },
     phpDefine = { link = "OrangeItalic" },
@@ -1710,7 +1600,6 @@ highlights.generate_syntax = function(palette, options)
     phpComparison = { link = "Orange" },
     phpMethodsVar = { link = "Aqua" },
     phpMemberSelector = { link = "Green" },
-
     -- Ruby
     rubyKeywordAsMethod = { link = "Green" },
     rubyInterpolation = { link = "Yellow" },
@@ -1722,7 +1611,6 @@ highlights.generate_syntax = function(palette, options)
     rubyAccess = { link = "Orange" },
     rubyAttribute = { link = "Yellow" },
     rubyMacro = { link = "RedItalic" },
-
     -- Elixir
     elixirStringDelimiter = { link = "Green" },
     elixirKeyword = { link = "Orange" },
@@ -1748,7 +1636,6 @@ highlights.generate_syntax = function(palette, options)
     elixirCallbackDefine = { link = "RedItalic" },
     elixirStructDefine = { link = "RedItalic" },
     elixirExUnitMacro = { link = "RedItalic" },
-
     -- sh/zsh
     shRange = { link = "Fg" },
     shTestOpr = { link = "Orange" },
@@ -1765,7 +1652,6 @@ highlights.generate_syntax = function(palette, options)
     shCommandSub = { link = "Orange" },
     shFunctionOne = { link = "Green" },
     shFunctionKey = { link = "RedItalic" },
-
     -- ZSH
     zshOptStart = { link = "PurpleItalic" },
     zshOption = { link = "Blue" },
@@ -1774,7 +1660,6 @@ highlights.generate_syntax = function(palette, options)
     zshDeref = { link = "Blue" },
     zshTypes = { link = "Orange" },
     zshVariableDef = { link = "Blue" },
-
     -- VimL
     vimLet = { link = "Orange" },
     vimFunction = { link = "Green" },
@@ -1795,7 +1680,6 @@ highlights.generate_syntax = function(palette, options)
     vimSet = { link = "Yellow" },
     vimSetSep = { link = "Grey" },
     vimContinue = { link = "Grey" },
-
     -- Make
     makeIdent = { link = "Aqua" },
     makeSpecTarget = { link = "Yellow" },
